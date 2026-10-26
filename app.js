@@ -14,7 +14,7 @@ function verdict(f){const g=n=>f.elements[n].checked,t=f.elements.type.value;
  if(!g("real"))return"Probably not a deepfake → Art. 50(4) label likely not required; voluntary label recommended."+P+NOTE;
  if(g("art"))return"Label likely required (light form): for evident artistic/satirical work, disclose AI use without hampering enjoyment."+P+NOTE;
  return(t==="audio"?"Label likely required: deepfake audio – use an audible disclaimer.":"Label likely required: deepfake – visible label, perceivable at first exposure, embedded where possible.")+P+NOTE;}
-$("#q").onsubmit=e=>{e.preventDefault();last=verdict(e.target);$("#verdict").textContent=last};
+$("#q").addEventListener("input",()=>{last="";$("#verdict").textContent=""});$("#q").addEventListener("change",()=>{last="";$("#verdict").textContent=""});$("#q").onsubmit=e=>{e.preventDefault();last=verdict(e.target);$("#verdict").textContent=last};
 function upd(){const s=T[$("#lang").value][$("#kind").value];$("#ltext").textContent=s;
  $("#snip").value=`<span class="ai-label" style="font:600 12px sans-serif;background:#111;color:#fff;padding:2px 6px;border-radius:4px">⚙ ${s}</span>`;return s}
 $("#lang").onchange=$("#kind").onchange=upd;upd();
