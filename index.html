@@ -11,6 +11,7 @@
 <label><input type="checkbox" name="real"> Resembles real people, objects, places or events and could falsely appear authentic (deepfake)</label>
 <label><input type="checkbox" name="public"> Text published to inform the public on matters of public interest</label>
 <label><input type="checkbox" name="review"> Human editorial review done and a person/company holds editorial responsibility</label>
+<label><input type="checkbox" name="law"> Use is authorised by law to detect, prevent, investigate or prosecute criminal offences</label>
 <label><input type="checkbox" name="art"> Evidently artistic, creative, satirical or fictional work</label>
 <button type="submit">Check</button></form><div id="verdict" class="card"></div>
 <h2>2. Generate the label</h2>
@@ -21,7 +22,7 @@
 <p>Stamp an image (processed locally): <input type="file" id="img" accept="image/*"></p>
 <canvas id="cv" hidden></canvas><a id="dl" class="btn" hidden download="labelled.png">Download labelled image</a>
 <h2>3. Disclosure log (evidence for your client)</h2>
-<form id="logf"><input name="item" placeholder="Asset / URL" required><input name="client" placeholder="Client"><input name="reviewer" placeholder="Reviewer"><button>Add entry</button></form>
+<form id="logf"><input name="asset" placeholder="Asset / URL" required><input name="client" placeholder="Client"><input name="reviewer" placeholder="Reviewer"><button>Add entry</button></form>
 <table id="log"><thead><tr><th>Date</th><th>Asset</th><th>Client</th><th>Verdict</th><th>Label</th><th>Reviewer</th></tr></thead><tbody></tbody></table>
 <button id="csv">Export CSV</button> <button id="clr">Clear</button></section>
 <section id="pricing"><h2>Pricing</h2><div class="grid">
