@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LabelKit by Jazari – AI Act Art. 50 labelling for agencies</title><link rel="stylesheet" href="style.css"></head><body>
+<header><b>LabelKit <small>by Jazari</small></b><nav><a href="#tool">Tool</a><a href="#pricing">Pricing</a><a href="#contact">Early access</a></nav></header>
+<section class="hero"><h1>Label AI-generated content the way the EU AI Act expects — in 2 minutes.</h1>
+<p>Since <b>2 August 2026</b>, Article 50 of the AI Act requires deployers to disclose deepfakes and AI-generated text published on matters of public interest. LabelKit helps agencies and creators decide, label and document — entirely in your browser. No upload, no account.</p>
+<a class="btn" href="#tool">Try it free</a><p class="small">Not legal advice. Sources: <a href="https://artificialintelligenceact.eu/article/50/">Art. 50 text</a>, <a href="https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content">EU Code of Practice</a>.</p></section>
+<section id="tool"><h2>1. Does this piece need a label?</h2>
+<form id="q">
+<label><input type="checkbox" name="ai"> Content was generated or manipulated with AI</label>
+<label>Type <select name="type"><option value="image">Image</option><option value="video">Video</option><option value="audio">Audio</option><option value="text">Text</option></select></label>
+<label><input type="checkbox" name="real"> Resembles real people, objects, places or events and could falsely appear authentic (deepfake)</label>
+<label><input type="checkbox" name="public"> Text published to inform the public on matters of public interest</label>
+<label><input type="checkbox" name="review"> Human editorial review done and a person/company holds editorial responsibility</label>
+<label><input type="checkbox" name="art"> Evidently artistic, creative, satirical or fictional work</label>
+<button type="submit">Check</button></form><div id="verdict" class="card"></div>
+<h2>2. Generate the label</h2>
+<label>Language <select id="lang"><option>en</option><option>de</option><option>tr</option></select></label>
+<label>Kind <select id="kind"><option value="full">Fully AI-generated</option><option value="mod">AI-modified</option></select></label>
+<p>Text: <code id="ltext"></code> <button id="copy">Copy</button></p>
+<p>HTML snippet: <textarea id="snip" rows="3" readonly></textarea></p>
+<p>Stamp an image (processed locally): <input type="file" id="img" accept="image/*"></p>
+<canvas id="cv" hidden></canvas><a id="dl" class="btn" hidden download="labelled.png">Download labelled image</a>
+<h2>3. Disclosure log (evidence for your client)</h2>
+<form id="logf"><input name="item" placeholder="Asset / URL" required><input name="client" placeholder="Client"><input name="reviewer" placeholder="Reviewer"><button>Add entry</button></form>
+<table id="log"><thead><tr><th>Date</th><th>Asset</th><th>Client</th><th>Verdict</th><th>Label</th><th>Reviewer</th></tr></thead><tbody></tbody></table>
+<button id="csv">Export CSV</button> <button id="clr">Clear</button></section>
+<section id="pricing"><h2>Pricing</h2><div class="grid">
+<div class="card"><h3>Free</h3><p>€0</p><p>Checker, labels, local log.</p></div>
+<div class="card"><h3>Agency</h3><p>€19 / month</p><p>Batch image stamping, branded PDF client reports, shared team log, DE/EN/TR templates.</p><a class="btn pay" data-plan="agency" href="#">Subscribe (Stripe)</a></div>
+<div class="card"><h3>Setup audit</h3><p>€149 one-off</p><p>We review your AI content workflow and deliver a written labelling policy (not legal advice).</p><a class="btn pay" data-plan="audit" href="#">Book audit (Stripe)</a></div></div></section>
+<section id="contact"><h2>Get early access</h2><p>Paid plans open to the first 20 agencies at 50% off for 3 months.</p>
+<a class="btn" id="mail" href="#">Request early access by email</a></section>
+<footer>© 2026 Jazari · operated by United Europe group, s.r.o. · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · LabelKit is an informational tool, not legal advice. All processing happens in your browser.</footer>
+<script src="app.js"></script></body></html>
